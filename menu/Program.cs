@@ -63,12 +63,13 @@ while (!control)
 
         if (found)
         {
-            Console.WriteLine("the found");
+            Console.WriteLine("the number is found");
 
         }
         else
         {
             list.Add(add);
+            Console.WriteLine( $" the number {add} is added");
         }
 
 
@@ -112,12 +113,13 @@ while (!control)
         int largestNum = list[0];
         for (int i = 0; i < list.Count; i++)
         {
-            if (largestNum < list[i])
+            if (list[i] >largestNum)
             {
                 largestNum = list[i];
             }
 
         }
+        Console.WriteLine(largestNum);
     }
     //find
     else if (enterchar == "F")
@@ -127,20 +129,25 @@ while (!control)
         bool found = false;
         for (int i = 0; i < list.Count; i++)
         {
+
+          
             if (list[i] == ind)
             {
-
-                Console.WriteLine(i);
+                ind = list[i];
                 found = true;
                 break;
             }
-
+    
 
         }
         if (!found)
         {
             Console.WriteLine(" the elemnt is not found");
         }
+        continue;   
+        Console.WriteLine($"the number  {ind} is found ");
+
+
     }
 
     //مسح الليست
